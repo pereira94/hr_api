@@ -25,5 +25,3 @@ def api_test(rowcount):
     data_1 = data[:rowcount]
     return jsonify(data_1)
 
-app.run()
-
