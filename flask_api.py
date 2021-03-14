@@ -1,9 +1,9 @@
 import flask
 from flask import request, jsonify
 import pandas as pd
-import boto3
+from decouple import config
 
-data = pd.read_csv('/Users/pedropereira/Downloads/HRDataset_v14.csv')
+data = pd.read_csv(config('URL'))
 data = data.to_dict('records')
 
 app = flask.Flask(__name__)
@@ -11,7 +11,7 @@ app.config["DEBUG"] = False
 
 @app.route('/', methods=['GET'])
 def home():
-    return '''<h1>Distant Reading Archive</h1>
+    return '''<h1>Records API</h1>
 <p>A prototype API for reading HR records.</p>'''
 
 
