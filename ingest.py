@@ -7,7 +7,7 @@ from decouple import config
 def get_data_chunks(chunk):
     x = 0
     y = chunk
-    while(y < 40):
+    while(y < 311):
         url = 'http://127.0.0.1:5000/api/v1/resources/data/'
         new_url = url + str(x) + '/' + str(y)
         df = pd.read_json(new_url)
