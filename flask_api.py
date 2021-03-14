@@ -1,6 +1,7 @@
 import flask
 from flask import request, jsonify
 import pandas as pd
+import boto3
 
 data = pd.read_csv('/Users/pedropereira/Downloads/HRDataset_v14.csv')
 data = data.to_dict('records')
