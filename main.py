@@ -25,3 +25,5 @@ def api_test(rowcount):
     data_1 = data[:rowcount]
     return jsonify(data_1)
 
+if __name__ == "__main__":
+  app.run()
